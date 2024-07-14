@@ -1,34 +1,63 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
 
-body{
+/* utilizo "em" en el tamño de la fuente por ser mas escalable par adaptar la pantalla*/
+
+body {
     font-family: "Mulish", sans-serif;
     font-weight: 700;
 }
 
-h1,p { font-size: 37px; 
+h1, p {
+    font-size: 2.5em; 
     color: #04146c;
-    font-weight: 900;}
+    font-weight: 900;
 }
-p{
+
+p {
     font-weight: 400;
-    font-size: 18px;
-    color:#04146c;
-    margin-left: 70px;
-    width: 40%;
-    margin-top: 0px;
-    
+    font-size: 1.125em; 
+    color: #04146c;
+    margin-left: 0; /* Ajuste para pantallas más pequeñas */
+    width: 100%; /* Ancho completo en pantallas más pequeñas */
+    margin-top: 0;
 }
 
-h2{
-    color:#0a2ff1;
-    font-size: 21px;
+h2 {
+    color: #0a2ff1;
+    font-size: 1.3125em; 
     text-transform: uppercase;
-    margin-bottom: 2px;
+    margin-bottom: 10px;
 }
 
-img{
-    width: 55px; 
-    vertical-align: middle; 
-    margin-right: 15px;
+img {
+    max-width: 100%; /* Imagen adaptativa al ancho del contenedor */
+    height: auto; 
+    display: inline-block; 
+    vertical-align: middle;
+    margin-right: 10px; 
+    margin-bottom: 10px;
+}
 
+
+@media only screen and (min-width: 768px) {
+    
+    p {
+        margin-left: 70px; /* Ajuste para pantallas más grandes */
+        width: 40%; /* Ancho del párrafo en pantallas más grandes */
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    
+    h1, p {
+        font-size: 1.875em; 
+    }
+
+    h2 {
+        font-size: 1.125em; 
+    }
+
+    img {
+        width: 45px;
+    }
 }
